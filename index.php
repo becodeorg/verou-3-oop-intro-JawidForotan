@@ -4,30 +4,34 @@ ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
 
-require("./beverage.php");
-require("./beer.php");
-require("./private.php");
+require("./1/exercise_1_classes.php");
+require("./2/exercise_2_extending.php");
+require("./3/exercise_3_private.php");
 
 
 
-$cola = new Beverage("Black", 2.5, "-5c°");
-$fanta = new Beverage("Orange", 1.5, "Cold");
+$cola = new Beverage("Black", 2);
+echo $cola->getInfo();
+echo $cola->temperature;
+
+$fanta = new Beverage("Orange", 1.5, "Warm");
+
+echo $fanta->getInfo();
+echo $fanta->temperature."<br/><br/>";
 
 // Create object beer and refer to the parent class constructor
 
-$newBeer = new Beer("Blond", 3.5, "Very cold");
+$beer1 = new Beer("duvel1", 8.5);
+echo $beer1->getAlcoholPercentage();
+echo $beer1->getInfo();
 
-echo $cola->getInfo();
-echo $fanta->getInfo();
-echo $newBeer->beerInfo(); 
+// Class with private properties
+$beer2 = new PrivateBeer("duvel2", 8.5);
+echo $beer2->beerInfo()."<br/>";
+echo $beer2->getInfo();
 
 // Create object of class with different access modifier
-$person1 = new Person("Jawid", 26, "Antwerp");
 
-echo $person1->personInfo(); 
-echo $person1->name;
-echo $person1->age;
-echo $person1->place;
 
 
 ?>

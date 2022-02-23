@@ -8,7 +8,7 @@ TODO: Make a getInfo function which returns "This beverage is <temperature> and 
 TODO: Instantiate an object which represents cola. Make sure that the color is set to black, the price equals 2 euro and the temperature to cold automatically
 print the getInfo on the screen.
 TODO: Print the temperature on the screen.
-USE TYPEHINTING EVERYWHERE!
+USE TYPEHINTING EVERYWHERE! 
 
 EXERCISE 2
 
@@ -35,4 +35,16 @@ Make sure that you use the variables and not just this text line.
 TODO: Print this method on the screen on a new line.
 USE TYPEHINTING EVERYWHERE!
 
+EXERCISE 4
 
+Copy the code of exercise 2 to here and delete everything related to cola.
+TODO: Make all properties protected.
+TODO: Make all the other prints work without error without changing the beverage class.
+USE TYPEHINTING EVERYWHERE!
+
+EXERCISE 5
+
+Copy the class of exercise 1.
+TODO: Change the properties to private.
+TODO: Fix the errors without using getter and setter functions.
+TODO: Change the price to 3.5 euro and print it also on the screen on a new line.
