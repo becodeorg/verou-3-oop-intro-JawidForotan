@@ -1,24 +1,37 @@
 <?php
 
-class PrivateBeer extends Beverage
+
+class Beverage
 {
-    private string $name;
-    private float $alcoholPercentage;
+  private string $color;
+  private float $price;
+  private string $temperature;
 
-    public function __construct($Name, $AlcoholPercentage,  $color = "Light", $price = 3.5,  $temperature = "Cold")
-    {
-        $this->name = ucfirst($Name);
-        $this->alcoholPercentage = $AlcoholPercentage;
-        $this->color = $color;
-        $this->price = $price;
-        $this->temperature = $temperature;
-    }
+  // function __construct($colorP = "Black", $priceP = 2, $temperatureP = "Cold")
+  // {
+  //     $this->color = $colorP;
+  //     $this->price = $priceP;
+  //     $this->temperature = $temperatureP;
+  // }
 
-    public function beerInfo()
-    {
-       return "Hi, i'm {$this->name} and have <b>{$this->alcoholPercentage}</b>  % alcohol";
-    }
+  // Setter
+  public function setInfo($colorP, $priceP, $temperatureP)
+  {
+    $this->color = $colorP;
+    $this->price = $priceP;
+    $this->temperature = $temperatureP;
+  }
+  
+  // Getter
+  public function getInfo()
+  {
+      
+      return "The color is {$this->color}, price is {$this->price} and temperature is {$this->temperature}";
+
+  }
 }
+
+
 
 
 ?>

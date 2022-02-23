@@ -1,24 +1,27 @@
 <?php
 
-class Beer extends Beverage
+
+class Beverage
 {
-    public string $name;
-    public float $alcoholPercentage;
+  public string $color;
+  public float $price;
+  public string $temperature;
 
-    public function __construct($Name, $AlcoholPercentage,  $color = "Blond", $price = 3.5,  $temperature = "Cold")
-    {
-        $this->name = ucfirst($Name);
-        $this->alcoholPercentage = $AlcoholPercentage;
-        $this->color = $color;
-        $this->price = $price;
-        $this->temperature = $temperature;
-    }
+  function __construct($colorP = "Black", $priceP = 2, $temperatureP = "Cold")
+  {
+      $this->color = $colorP;
+      $this->price = $priceP;
+      $this->temperature = $temperatureP;
+  }
+  
+  function getInfo()
+  {
+      return "<h3> The beverage is: {$this->temperature} and color is: {$this->color}</h3><br/>";
 
-    public function getAlcoholPercentage()
-    {
-       return "{$this->name} has <b>{$this->alcoholPercentage}</b>  % alcohol";
-    }
+  }
 }
+
+
 
 
 

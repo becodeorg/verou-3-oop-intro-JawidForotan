@@ -1,4 +1,6 @@
 <?php
+
+
 class Beverage
 {
   protected string $color;
